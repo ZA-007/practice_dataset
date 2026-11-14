@@ -287,3 +287,217 @@ Both techniques identified meaningful customer segments based on age, annual inc
 
 FCM is particularly useful when customer behaviour overlaps between segments because it provides membership scores rather than only one fixed assignment. Both techniques can help businesses understand their customers and support more targeted marketing decisions.
 """
+
+# ==============================================================
+# DECISION TREE
+# ==============================================================
+
+"""
+Decision Tree was selected as the baseline classification technique because
+it is widely used, interpretable and capable of generating transparent
+decision rules.
+
+The algorithm recursively partitions the dataset based on the most
+informative predictors, enabling the identification of key factors
+associated with the target variable.
+
+A random_state value of 42 was specified to ensure reproducibility of the
+results, while class_weight='balanced' was used to compensate for class
+imbalance within the target variable.
+"""
+
+
+# ==============================================================
+# RANDOM FOREST
+# ==============================================================
+
+"""
+Random Forest was selected as the advanced classification technique because
+it extends the Decision Tree approach through ensemble learning.
+
+Rather than relying on a single tree, Random Forest constructs multiple
+decision trees using bootstrap samples and combines their predictions
+through majority voting. This reduces overfitting and improves model
+generalisation.
+
+The parameter n_estimators=[X] was selected to increase prediction
+stability, while random_state=42 ensured reproducibility of results.
+"""
+
+# ==============================================================
+# ADABOOST
+# ==============================================================
+
+"""
+AdaBoost was selected as the advanced classification technique because it
+is an ensemble boosting method that sequentially trains weak learners.
+
+Each new learner focuses on observations that were previously
+misclassified, allowing the model to progressively improve predictive
+performance.
+
+The algorithm was configured using Decision Stumps
+(max_depth=1) as weak learners and n_estimators=[X] boosting rounds.
+"""
+
+# ==============================================================
+# CLASSIFICATION COMPARISON
+# ==============================================================
+
+"""
+Both classification models successfully predicted the target variable.
+
+[MODEL NAME] achieved the highest Accuracy ([X]) and F1 Score ([Y]),
+demonstrating superior predictive performance.
+
+Cross-validation results further indicated that [MODEL NAME] produced
+more consistent results, suggesting stronger generalisation to unseen
+data.
+
+Feature importance analysis revealed that [FEATURE 1], [FEATURE 2] and
+[FEATURE 3] exerted the strongest influence on model predictions.
+"""
+
+# ==============================================================
+# K-MEANS
+# ==============================================================
+
+"""
+K-Means was selected as the baseline clustering technique because it is
+computationally efficient and widely used for customer segmentation.
+
+The algorithm partitions observations into K groups by assigning data
+points to the nearest cluster centroid while minimising within-cluster
+variance.
+
+The optimal number of clusters was determined using the Elbow Method and
+Silhouette Analysis.
+"""
+
+# ==============================================================
+# HIERARCHICAL CLUSTERING
+# ==============================================================
+
+"""
+Hierarchical Clustering was selected as the advanced clustering technique
+because it provides insight into relationships between clusters through
+the construction of a dendrogram.
+
+Unlike K-Means, Hierarchical Clustering progressively merges observations
+based on similarity without relying on initial centroid placement.
+
+Ward linkage was used because it minimises within-cluster variance and
+often produces compact, interpretable clusters.
+"""
+
+# ==============================================================
+# FUZZY C-MEANS
+# ==============================================================
+
+"""
+Fuzzy C-Means was selected as the advanced clustering technique because it
+allows observations to belong to multiple clusters simultaneously.
+
+Unlike K-Means, which creates hard cluster assignments, Fuzzy C-Means
+calculates membership values representing the degree to which each
+observation belongs to every cluster.
+
+This provides a more realistic representation of customer behaviour when
+segment boundaries overlap.
+"""
+
+# ==============================================================
+# CLUSTERING COMPARISON
+# ==============================================================
+
+"""
+Cluster quality was evaluated using Silhouette Analysis
+and membership quality measures.
+
+K-Means produced a Silhouette Score of [X], indicating [strong/moderate]
+cluster separation.
+
+[Fuzzy C-Means / Hierarchical Clustering] achieved [RESULTS].
+
+Overall, [BEST MODEL] produced the most meaningful segmentation structure
+and generated interpretable customer groups suitable for business decision
+making.
+"""
+
+# ==============================================================
+# COMPLEMENT NAIVE BAYES
+# ==============================================================
+
+"""
+Complement Naive Bayes was selected as the baseline NLP classification
+model because it is specifically designed for text classification tasks
+and performs particularly well on imbalanced datasets.
+
+The algorithm uses information from the complement of each class,
+reducing the bias often observed in traditional Naive Bayes models when
+class distributions are uneven.
+"""
+
+# ==============================================================
+# SGD CLASSIFIER
+# ==============================================================
+
+"""
+SGDClassifier was selected as the advanced NLP classification technique
+because it efficiently handles high-dimensional sparse text data such as
+Bag-of-Words and TF-IDF feature representations.
+
+The model was trained using Stochastic Gradient Descent, allowing rapid
+optimisation even when thousands of text features are present.
+
+Class balancing was enabled through class_weight='balanced' to reduce
+bias towards the majority class and improve classification performance.
+"""
+
+# ==============================================================
+# TF-IDF
+# ==============================================================
+
+"""
+TF-IDF (Term Frequency-Inverse Document Frequency) was used to transform
+text into numerical features whilst assigning greater importance to rare
+and informative words.
+
+Compared with Bag-of-Words, TF-IDF reduces the influence of extremely
+common words and often provides improved text classification performance.
+"""
+
+# ==============================================================
+# NLP COMPARISON
+# ==============================================================
+
+"""
+Both NLP models demonstrated strong classification performance.
+
+Complement Naive Bayes achieved an Accuracy of [X], whilst SGDClassifier
+achieved an Accuracy of [Y].
+
+The superior performance of SGDClassifier suggests that optimisation-based
+approaches are more effective at learning complex patterns within text
+data.
+
+Analysis of model coefficients revealed that words such as
+[WORDS] were strongly associated with [SPAM/POSITIVE] messages, whilst
+terms such as [WORDS] were associated with [HAM/NEGATIVE] messages.
+"""
+
+# ==============================================================
+# CONCLUSION (ALL REPORTS)
+# ==============================================================
+
+"""
+The selected machine learning techniques were successfully applied to
+address the business problem.
+
+Comparative evaluation demonstrated that [BEST MODEL] achieved the
+strongest overall performance according to [Accuracy/F1/Silhouette].
+
+Based on the obtained results, [BEST MODEL] is recommended as the most
+appropriate solution due to its superior predictive performance,
+generalisability and practical business value.
+"""

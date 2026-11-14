@@ -167,3 +167,46 @@ X_scaled = scaler.fit_transform(X)
 #to see if churn is imbalanced or not
 print(data["Churn"].value_counts())
 print(data["Churn"].value_counts(normalize=True) * 100)
+
+
+#what i would use to evaluate each model:
+''''' CLASSIFICATION MODELS
+Evaluation:
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Confusion Matrix
+- Cross Validation Accuracy
+- Feature Importance
+
+CLUSTERING:
+Evaluation:
+- Elbow Method
+- Silhouette Score - how well seperated the clusters are , closert to 1 is better
+- Scatter Plot
+- Cluster Profiles groupby(cluster).mean() what actually chracterizes each cluster , ex : high milk spending
+- Cluster Sizes value_counts(), are clusters balanced
+- Dendrogram (Hierarchical only)
+
+NLP:
+Evaluation:
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Classification Report
+- Confusion Matrix
+- Error Analysis
+- Word Clouds
+- Most Important Features
+
+
+Required Report Structure
+
+Page 1 (10 marks): Problem Introduction and Data Presentation (bullet points + snapshots)
+Page 2 (20 marks): Data Pre-processing Techniques Applied (bullet points + snapshots)
+Page 3 (20 marks): Technique 1 – Motivation (technical & business), code/result snapshot, and model parameters (bullet points + snapshots)
+Page 4 (20 marks): Technique 2 – Motivation (technical & business), code/result snapshot, and model parameters (bullet points + snapshots)
+Page 5 (20 marks): Comparison of Testing Performances (or demonstration on the testing dataset) (bullet points + snapshots)
+Page 6 (10 marks): Summary and Conclusions – Technique comparison and final outcome (bullet points + snapshots)'''
